@@ -1,0 +1,323 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{096308FB-F199-4A5C-A8C4-DD7E7E3CEC30}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TP___Gestion_de_vuelos</RootNamespace>
+    <AssemblyName>TP - Gestion de vuelos</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ABM\Pasajeros\AgregarPasajero.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ABM\Pasajeros\AgregarPasajero.Designer.cs">
+      <DependentUpon>AgregarPasajero.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ABM\Pasajeros\ModificarPasajero.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ABM\Pasajeros\ModificarPasajero.Designer.cs">
+      <DependentUpon>ModificarPasajero.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ABM\Pasajeros\EliminarPasajero.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ABM\Pasajeros\EliminarPasajero.Designer.cs">
+      <DependentUpon>EliminarPasajero.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ABM\Destinos\AgregarDestino.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ABM\Destinos\AgregarDestino.Designer.cs">
+      <DependentUpon>AgregarDestino.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ABM\Vuelos\AgregarVuelos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ABM\Vuelos\AgregarVuelos.Designer.cs">
+      <DependentUpon>AgregarVuelos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ABM\Destinos\EliminarDestino.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ABM\Destinos\EliminarDestino.Designer.cs">
+      <DependentUpon>EliminarDestino.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ABM\Vuelos\EliminarVuelo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ABM\Vuelos\EliminarVuelo.Designer.cs">
+      <DependentUpon>EliminarVuelo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ABM\Destinos\ModificarDestino.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ABM\Destinos\ModificarDestino.Designer.cs">
+      <DependentUpon>ModificarDestino.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ABM\Vuelos\ModificarVuelo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ABM\Vuelos\ModificarVuelo.Designer.cs">
+      <DependentUpon>ModificarVuelo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clases\ConexionTabla.cs" />
+    <Compile Include="Clases\Conexion.cs" />
+    <Compile Include="Clases\DatosDestinos.cs" />
+    <Compile Include="Clases\DatosPasajeros.cs" />
+    <Compile Include="Clases\DatosVuelos.cs" />
+    <Compile Include="Clases\NPasajero.cs" />
+    <Compile Include="Clases\NDestino.cs" />
+    <Compile Include="Clases\NVuelo.cs" />
+    <Compile Include="Clases\GestionarDestinos.cs" />
+    <Compile Include="Clases\GestionarPasajeros.cs" />
+    <Compile Include="Clases\GestionarVuelos.cs" />
+    <Compile Include="Clases\GestionarPagos.cs" />
+    <Compile Include="Clases\DatosPagos.cs" />
+    <Compile Include="Clases\DatosDetallePago.cs" />
+    <Compile Include="Clases\GestionarDetallePago.cs" />
+    <Compile Include="Submenús\Búsqueda\Reportes\Ocupacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Submenús\Búsqueda\Reportes\Ocupacion.Designer.cs">
+      <DependentUpon>Ocupacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Submenús\Búsqueda\Reportes\Recaudaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Submenús\Búsqueda\Reportes\Recaudaciones.Designer.cs">
+      <DependentUpon>Recaudaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Submenús\Búsqueda\Reportes\PasajerosxVuelo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Submenús\Búsqueda\Reportes\PasajerosxVuelo.Designer.cs">
+      <DependentUpon>PasajerosxVuelo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Submenús\Integrantes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Submenús\Integrantes.Designer.cs">
+      <DependentUpon>Integrantes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Submenús\Configuración\ImporteDestino.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Submenús\Configuración\ImporteDestino.Designer.cs">
+      <DependentUpon>ImporteDestino.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Submenús\Configuración\PorcentajeClase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Submenús\Configuración\PorcentajeClase.Designer.cs">
+      <DependentUpon>PorcentajeClase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Submenús\Búsqueda\PagosRealizados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Submenús\Búsqueda\PagosRealizados.Designer.cs">
+      <DependentUpon>PagosRealizados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Submenús\Búsqueda\Listados\ListadoAviones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Submenús\Búsqueda\Listados\ListadoAviones.Designer.cs">
+      <DependentUpon>ListadoAviones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Submenús\Búsqueda\Listados\ListadoDestinos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Submenús\Búsqueda\Listados\ListadoDestinos.Designer.cs">
+      <DependentUpon>ListadoDestinos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Submenús\Búsqueda\Listados\ListadoVuelos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Submenús\Búsqueda\Listados\ListadoVuelos.Designer.cs">
+      <DependentUpon>ListadoVuelos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Submenús\Búsqueda\Listados\ListadoPasajeros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Submenús\Búsqueda\Listados\ListadoPasajeros.Designer.cs">
+      <DependentUpon>ListadoPasajeros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Submenús\RealizarCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Submenús\RealizarCompra.Designer.cs">
+      <DependentUpon>RealizarCompra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Submenús\Archivo\EliminarElemento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Submenús\Archivo\EliminarElemento.Designer.cs">
+      <DependentUpon>EliminarElemento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPadre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPadre.Designer.cs">
+      <DependentUpon>FormPadre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Submenús\Archivo\ModificarElemento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Submenús\Archivo\ModificarElemento.Designer.cs">
+      <DependentUpon>ModificarElemento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Submenús\Archivo\NuevoElemento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Submenús\Archivo\NuevoElemento.Designer.cs">
+      <DependentUpon>NuevoElemento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ABM\Destinos\AgregarDestino.resx">
+      <DependentUpon>AgregarDestino.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ABM\Destinos\EliminarDestino.resx">
+      <DependentUpon>EliminarDestino.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ABM\Destinos\ModificarDestino.resx">
+      <DependentUpon>ModificarDestino.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ABM\Pasajeros\AgregarPasajero.resx">
+      <DependentUpon>AgregarPasajero.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ABM\Pasajeros\ModificarPasajero.resx">
+      <DependentUpon>ModificarPasajero.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ABM\Pasajeros\EliminarPasajero.resx">
+      <DependentUpon>EliminarPasajero.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ABM\Vuelos\AgregarVuelos.resx">
+      <DependentUpon>AgregarVuelos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ABM\Vuelos\EliminarVuelo.resx">
+      <DependentUpon>EliminarVuelo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ABM\Vuelos\ModificarVuelo.resx">
+      <DependentUpon>ModificarVuelo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Submenús\Búsqueda\Reportes\Ocupacion.resx">
+      <DependentUpon>Ocupacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Submenús\Búsqueda\Reportes\Recaudaciones.resx">
+      <DependentUpon>Recaudaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Submenús\Búsqueda\Reportes\PasajerosxVuelo.resx">
+      <DependentUpon>PasajerosxVuelo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Submenús\Integrantes.resx">
+      <DependentUpon>Integrantes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Submenús\Configuración\ImporteDestino.resx">
+      <DependentUpon>ImporteDestino.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Submenús\Configuración\PorcentajeClase.resx">
+      <DependentUpon>PorcentajeClase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Submenús\RealizarCompra.resx">
+      <DependentUpon>RealizarCompra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Submenús\Búsqueda\PagosRealizados.resx">
+      <DependentUpon>PagosRealizados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Submenús\Archivo\EliminarElemento.resx">
+      <DependentUpon>EliminarElemento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPadre.resx">
+      <DependentUpon>FormPadre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Submenús\Búsqueda\Listados\ListadoAviones.resx">
+      <DependentUpon>ListadoAviones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Submenús\Búsqueda\Listados\ListadoDestinos.resx">
+      <DependentUpon>ListadoDestinos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Submenús\Búsqueda\Listados\ListadoPasajeros.resx">
+      <DependentUpon>ListadoPasajeros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Submenús\Búsqueda\Listados\ListadoVuelos.resx">
+      <DependentUpon>ListadoVuelos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Submenús\Archivo\ModificarElemento.resx">
+      <DependentUpon>ModificarElemento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Submenús\Archivo\NuevoElemento.resx">
+      <DependentUpon>NuevoElemento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
